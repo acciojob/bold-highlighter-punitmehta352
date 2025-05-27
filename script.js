@@ -1,12 +1,14 @@
-function highlight() {
-    //Write your code here
+ const boldWords = document.querySelectorAll('strong');
+    const hoverLink = document.getElementById('hoverlink');
+   
+   hoverLink.addEventListener('mouseover', () => {
+        boldWords.forEach(word => {
+            word.style.color = 'rgb(0,128,0)';
+        });
+    });
 
-
-}
-
-
-function return_normal() {
-    //Write your code here
-
-    
-}
+    hoverLink.addEventListener('mouseout', () => {
+        boldWords.forEach(word => {
+            word.style.color = '';
+        });
+    });
